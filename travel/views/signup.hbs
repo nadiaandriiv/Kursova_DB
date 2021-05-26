@@ -1,0 +1,42 @@
+{{> header}}
+<div class="container-fluid mt-3 signup-main">
+    <div class="row">
+        {{#each errors}}
+        <div class="col">
+            <div class="alert alert-danger" role="alert">
+                {{this}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+
+
+
+<section class="form-signup">
+    <div class="section-inner">
+        <form method="POST">
+            <div class="input-group name">
+                <label>Login</label>
+                <input type="text" placeholder="Type login here..." name="login">
+            </div>
+            <div class="input-group email">
+                <label>Email</label>
+                <input type="email" placeholder="example.address@email.com" name="email" required>
+            </div>
+            <div class="input-group address">
+                <label>Password</label>
+                <input type="password" id="floatingInput" name="password" placeholder="Password">
+            </div>
+            <div class="input-group name-on-card">
+                <label>Confirm Password</label>
+                <input type="password" id="floatingInput" name="confirmPassword" placeholder="Confirm Password">
+            </div>
+            <div class="submit-button-wrapper">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+</section>
+{{!-- {{> footer}} --}}

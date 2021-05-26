@@ -1,0 +1,593 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow-x: hidden;
+    background: #fafafa;
+}
+
+body, body * {
+    box-sizing: border-box;
+}
+
+body * {
+    font-family: "Montserrat", sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.header-wrapper {
+    margin: 0 auto;
+    padding: 0 40px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(253, 104, 104);
+}
+
+header .logo {
+    display: block;
+    width: 100px;
+    object-fit: contain;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {margin-right: 36px;}
+nav li:last-child {margin-right: 0;}
+
+nav li a {
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+}
+
+.header-button {
+    font-size: 16px;
+    display: inline-block;
+    padding: 8px 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    border-radius: 12px;
+    border: 2px solid #fd6868;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.header-button:hover {
+    background-color: #fd6868;
+    box-shadow: 0 10px 14px rgba(0, 0, 0, 0.3);
+}
+
+.signin-button {
+    font-size: 16px;
+    display: inline-block;
+
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    border-radius: 12px;
+    border: 2px solid #fd6868;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.section-inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;  
+    width: calc(100% - 2*40px);
+    padding: 0 40px;
+}
+
+.intro {
+    max-width: 100%;
+    height: 700px;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(balloons.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+}
+
+.intro h1 {
+    margin-top: 120px;
+    margin-bottom: 14px;
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 600;
+    max-width: 700px
+}
+
+.intro p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 700px;
+}
+
+.intro .intro-button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    background-color: #fd6868;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.intro .intro-button:hover {
+    transform: translateY(-1px);
+    background-color: #ff7272;
+    box-shadow: 0 16px 20px rgba(0, 0, 0, 0.3);
+}
+
+section h2 {
+    font-size: 42px;
+    font-weight: 500;
+    margin-top: 108px;
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.special-offers h2 {margin-top: 124px}
+
+.tour-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tour-card {
+    flex-basis: 360px;
+    max-width: calc(50% - 20px);
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+    border-radius: 12px;
+    background: white;
+    margin-right: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+}
+.tour-card:nth-child(3n) {
+    margin-right: 0;
+}
+
+.tour-card .card-inner {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 28px 28px 28px;
+}
+
+.tour-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tour-card h3 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.tour-card p {
+    flex-grow: 1;
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.7;
+    margin: 0;
+}
+
+.tour-card a {
+    margin-top: 24px;
+    font-size: 18px;
+    padding: 12px 24px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    background-color: #fd6868;
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.tour-card a:hover {
+    transform: translateY(-1px);
+    background-color: #ff7272;
+    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.15);
+}
+
+.review-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.review-card {
+    border-radius: 12px;
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    flex-basis: 360px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin-right: 48px;
+    margin-bottom: 48px;
+}
+.review-card:nth-child(2n) {margin: 0;}
+
+.review-card img {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 36px;
+}
+
+.review-card .review-user-info {
+    margin-left: 16px;
+    flex-grow: 0;
+}
+
+.review-card .review-user-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 13px;
+    margin-bottom: 4px;
+}
+
+.review-card .review-user-country {
+    opacity: 0.7;
+}
+
+.review-card p {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.form-signup h2 {
+    margin-bottom: 32px
+}
+
+.form-signup h2 + p {
+    font-size: 18px;
+    opacity: 0.7;
+    margin-bottom: 48px;
+}
+
+.form-signup form {
+    border-radius: 12px;
+    padding: 24px 48px 48px 48px;
+    background: white;
+    min-width: 540px;
+    max-width: 80%;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-signup label {
+    display: block;
+    margin-top: 32px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    opacity: 0.7; 
+}
+
+.form-signup .input-group {
+    flex-grow: 1;
+    flex-basis: 300px;
+    margin-right: 24px;
+}
+
+.form-signup input {
+    width: 100%;
+    font-size: 18px;
+    border-radius: 12px;
+    border: 2px solid #fd6868;
+    padding: 12px 20px;
+    background: none;
+}
+
+.form-signup .input-group.card-number {
+    flex-basis: 280px;
+    flex-grow: 0;
+}
+
+.form-signup .input-group.expiration-date {
+    flex-basis: auto;
+    flex-grow: 0;
+}
+.form-signup input[name="card-expiration-month"] {width: 86px;}
+.form-signup input[name="card-expiration-year"] {width: 120px;}
+
+.form-signup .input-group.cvv {
+    flex-basis: 100px;
+    flex-grow: 0;
+}
+
+.form-signup .submit-button-wrapper {
+    flex-basis: 100%;
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.form-signup button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    background-color: #fd6868;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.form-signup button:hover {
+    transform: translateY(-1px);
+    background-color: #ff7272;
+    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+    margin-top: 120px;
+    background: #001319;
+    color: white;
+}
+
+.footer-inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;  
+    width: calc(100% - 2*40px);
+    padding: 48px 40px 60px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    flex-wrap: wrap;
+}
+
+footer .logo {
+    width: 130px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.footer-contacts {
+    flex-basis: 400px
+}
+
+.footer-contacts h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.footer-contacts a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 3px;
+    transition: color 0.2s ease;
+}
+.footer-contacts a:hover {color: #fd6868;}
+
+.footer-legal {
+    flex-basis: 100%;
+    padding-top: 24px;
+    margin-top: 48px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+section h2 {
+    font-size: 42px;
+    font-weight: 500;
+    margin-top: 108px;
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.special-offers h2 {margin-top: 124px}
+
+.tour-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.tour-card {
+    flex-basis: 360px;
+    max-width: calc(50% - 20px);
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+    border-radius: 12px;
+    background: white;
+    margin-right: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+}
+.tour-card:nth-child(4n) {
+    margin-right: 0;
+}
+
+.tour-card .card-inner {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 28px 28px 28px;
+}
+
+.tour-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tour-card h3 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.tour-card p {
+    flex-grow: 1;
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.7;
+    margin: 0;
+}
+
+.tour-card a {
+    margin-top: 24px;
+    font-size: 18px;
+    padding: 12px 24px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    background-color: #fd6868;
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.tour-card a:hover {
+    transform: translateY(-1px);
+    background-color: #ff7272;
+    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
+section h2 {
+    font-size: 42px;
+    font-weight: 500;
+    margin-top: 108px;
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.special-offers-blog h2 {margin-top: 124px}
+
+.tour-cards-blog  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.tour-card-blog  {
+    flex-basis: 360px;
+    max-width: calc(50% - 20px);
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+    border-radius: 12px;
+    background: white;
+    margin-right: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+}
+.tour-card-blog :nth-child(4n) {
+    margin-right: 0;
+}
+
+.tour-card-blog  .card-inner-blog {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 28px 28px 28px;
+}
+
+.tour-card-blog  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tour-card-blog  h3 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.tour-card-blog p {
+    flex-grow: 1;
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.7;
+    margin-bottom: 25px;
+}
+
+.tour-card-blog a {
+    font-size: 18px;
+    padding: 12px 26px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    background-color: #fd6868;
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tour-card-blog  a:hover {
+    transform: translateY(-1px);
+    background-color: #ff7272;
+    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.15);
+}
+
+.blog-main, .signup-main, .singin-main{
+    margin-top: 120px;
+}
+
+.vidoe-wrapper{
+    display: flex;
+    justify-content: center;
+}

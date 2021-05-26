@@ -1,0 +1,125 @@
+{{> header}}
+<main>
+    <section class="intro">
+        <div class="section-inner">
+            <h1>Your best tour operator!</h1>
+            <p>Find the most amazing destinations for your next vacation with our curated selection of tours. Sign up
+                today and explore the world!</p>
+            <a href="#special-offers" class="intro-button">Start exploring</a>
+        </div>
+    </section>
+    <section class="special-offers">
+        <div class="section-inner">
+            <h2>Special offers</h2>
+            <div class="tour-cards">
+                <div class="tour-card">
+                    <img src="maldives.jpg" alt="Maldives">
+                    <div class="card-inner">
+                        <h3>Maldives</h3>
+                        <p>A small archipelagic state in South Asia, situated in the Arabian Sea of the Indian
+                            Ocean.</p>
+                        <a id="1"  class="tour">Reserve</a>
+                        <h1 id="msg-tour-1"></h1>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <img src="manarola.jpg" alt="Manarola">
+                    <div class="card-inner">
+                        <h3 class="card-title">Manarola</h3>
+                        <p>A small town, a frazione of the comune (municipality) of Riomaggiore, in the province of La
+                            Spezia, Liguria, northern Italy.</p>
+                        <a id="2"  class="tour">Reserve</a>
+                        <h1 id="msg-tour-2"></h1>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <img src="monaco.jpg" alt="Monaco">
+                    <div class="card-inner">
+                        <h3>Monaco</h3>
+                        <p>A sovereign city-state and microstate on the French Riviera close to the Italian region of
+                            Liguria, in Western Europe.</p>
+                        <a id="3" class="tour">Reserve</a>
+                        <h1 id="msg-tour-3"></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="reviews">
+        <div class="section-inner">
+            <h2>Check out our reviews</h2>
+            <div class="review-cards-container">
+                <div class="review-card">
+                    <img src="avatar-1.jpg" alt="Oleg Olegov">
+                    <div class="review-user-info">
+                        <div class="review-user-name">Oleg Olegov</div>
+                        <div class="review-user-country">Ukraine</div>
+                    </div>
+                    <p>Favorite travel company. We are traveling through this company for the fifth time. We are always
+                        satisfied. It is very convenient.</p>
+                </div>
+                <div class="review-card">
+                    <img src="avatar-2.jpg" alt="Roman Romanenko">
+                    <div class="review-user-info">
+                        <div class="review-user-name">Roman Romanenko</div>
+                        <div class="review-user-country">Ukraine</div>
+                    </div>
+                    <p>I wanted to thank the company and employees for such great support at every step, inform clearly,
+                        qualitatively, try to go to a meeting on any issue! Thank you very much and definitely
+                        recommend!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{{#if isAuth }}
+    <section class="form-signup">
+        <div class="section-inner">
+            <h2>Your last chance</h2>
+            <p>Please fill in this form to book a tour</p>
+            <form method="POST">
+                <div class="input-group name">
+                    <label>Login</label>
+                    <input type="text" placeholder="Type login here..." name="login">
+                </div>
+                <div class="input-group email">
+                    <label>Email</label>
+                    <input type="email" placeholder="example.address@email.com" name="email" required>
+                </div>
+                <div class="input-group address">
+                    <label>Password</label>
+                    <input type="password" id="floatingInput" name="password" placeholder="Password">
+                </div>
+                <div class="input-group name-on-card">
+                    <label>Confirm Password</label>
+                    <input type="password" id="floatingInput" name="confirmPassword" placeholder="Confirm Password">
+                </div>
+                <div class="submit-button-wrapper">
+                    <button type="submit">Register</button>
+                </div>
+            </form>
+        </div>
+    </section>
+{{/if}}
+
+
+
+    <script>
+        $("main").on('click','.tour',function(){
+            let id = this.id;
+            $.ajax({
+                type: 'POST',
+                url: '/reserve/',
+                data: {
+                    id: id
+                },						
+                success: function(data) {
+                    console.log('success');
+                    $(`#msg-tour-${id}`).text(data);
+                    console.log(data);
+                }
+            });
+        });
+    </script>
+</main>
+{{!-- {{> footer}} --}}
